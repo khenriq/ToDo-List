@@ -1,102 +1,48 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
 
-
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background: #F5F7FA;
-    font-family: "Montserrat", sans-serif !important;
-      
-
-
-
+	line-height: 1;
 }
-
-a  {
-    text-decoration: none;
+ol, ul {
+	list-style: none;
 }
-
-.caixa {
-    width: 500px;
-    text-align: center;
+blockquote, q {
+	quotes: none;
 }
-
-.titulo {
-    font-size: 40px;
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
 }
-
-.input-box {
-    margin: 20px 0px;
-    position: relative;
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
 }
-
-.input-text {
-    padding: 20px 60px;
-    border-radius: 40px;
-    border: #ccc solid 1px;
-}
-
-.input-submit {
-    padding: 16px 90px;
-    border-radius: 20px;
-    border: none;
-    background: linear-gradient(to right, #7733a7, #23137e);
-    color: white;
-    cursor: pointer;
-    transition: all 1s;
-    font-size: 20px;
-}
-
-.input-submit:hover {
-    transform: scale(1.1);
-}
-
-.input-box i {
-    position: absolute;
-    right: 355px;
-    top: 48px;
-    font-size: 22px;
-}
-
-.esqueceu-senha  {
-    margin: 0 0 30px 0;
-}
-
-
-.esqueceu-senha:hover a {
-    text-decoration: underline;
-}
-
-.cadastro {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    margin: 0 0 30px;
-}
-
-.cadastro:hover a {
-    text-decoration: underline ;
-}
-
-.input-box label {
-    display: block;
-    font-size: 20px;
-    margin: 0 200px 10px 0;
-
-}
-
-.input-text {
-    padding: 20px 60px;
-}
-
-.input-box p, a {
-    font-size: 18px;
-    line-height: 2;
-}
-
-.input-box:hover a {
-    text-decoration: underline;
-    color: blue;
-}
-
