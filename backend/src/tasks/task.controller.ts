@@ -1,13 +1,13 @@
 // tasks/tasks.controller.ts
 import { Request, Response, Router } from "express";
-import { TaskService } from "./task.service";
+import { TaskService } from "./task.service.ts";
 
 const taskService = new TaskService();
 const router = Router();
 
-router.get("/task", async (req: Request , res: Response) => {c
+router.get("/", (req: Request, res: Response) => {
    const tasks = taskService.getAllTasks();
-   return res.status(200).json(tasks);
+   res.status(200).json(tasks);
 });
 
 export default router;
