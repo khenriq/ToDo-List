@@ -44,7 +44,7 @@ router.delete("/:id", (req: Request, res: Response): void => {
   const deleteTask = taskService.deleteTask(req.params.id);
   if (!deleteTask) {
     res.status(404).json({menssage: "tarefa não encontrada" });
-    retux;
+    return;
   }
   res.json({ message: "Tarefa Removida Com Sucesso" });
 });
