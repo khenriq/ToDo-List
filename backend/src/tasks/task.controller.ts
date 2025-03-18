@@ -32,7 +32,7 @@ router.post("/", (req: Request, res: Response): void => {
 router.put("/:id", (req: Request, res: Response): void => {
   const updatedTask = taskService.updateTask(req.params.id, req.body);
   if (!updatedTask) {
-    res.status(404).json({menssage: "tarefa não encontrada" });
+    res.status(404).json({menssage: "tarefa não encontrada1" });
     return;
   }
   res.json(updatedTask);
@@ -40,6 +40,14 @@ router.put("/:id", (req: Request, res: Response): void => {
 
 export default router;
 
+router.delete("/:id", (req: Request, res: Response): void => {
+  const deleteTask = taskService.deleteTask(req.params.id);
+  if (!deleteTask) {
+    res.status(404).json({menssage: "tarefa não encontrada" });
+    return;
+  }
+  res.json({ message: "Tarefa Removida Com Sucesso" });
+});
 
 
 
