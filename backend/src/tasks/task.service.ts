@@ -37,8 +37,7 @@ export class TaskService {
       if (taskIndex === -1) return null;
       const [deletedTask] = this.tasks.splice(taskIndex, 1);
       return deletedTask;
-
-   }
+   };
 
 
 

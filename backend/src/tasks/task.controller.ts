@@ -1,6 +1,6 @@
 // tasks/tasks.controller.ts
 import { Request, Response, Router } from "express";
-import { TaskService } from "./task.service.ts";
+import { TaskService } from "./task.service";
 
 const taskService = new TaskService();
 const router = Router();
@@ -38,8 +38,6 @@ router.put("/:id", (req: Request, res: Response): void => {
   res.json(updatedTask);
 });
 
-export default router;
-
 router.delete("/:id", (req: Request, res: Response): void => {
   const deleteTask = taskService.deleteTask(req.params.id);
   if (!deleteTask) {
@@ -49,5 +47,4 @@ router.delete("/:id", (req: Request, res: Response): void => {
   res.json({ message: "Tarefa Removida Com Sucesso" });
 });
 
-
-
+export default router;
